@@ -33,7 +33,7 @@ if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
 }
 
-// Basic form handling (demo only)
+// Basic form handling with inline status
 const form = document.getElementById('quote-form');
 if (form) {
   form.addEventListener('submit', (e) => {
@@ -45,6 +45,27 @@ if (form) {
       e.preventDefault();
       alert('Please complete the required fields.');
       return;
+    }
+    // show loading state (works even when submitting to external endpoint)
+    const statusEl = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-btn');
+    if (statusEl) {
+      statusEl.hidden = false;
+      statusEl.className = 'form-status';
+      statusEl.textContent = 'Sending your request...';
+    }
+    if (submitBtn) {
+      submitBtn.setAttribute('aria-busy', 'true');
+      submitBtn.disabled = true;
+      setTimeout(() => {
+        submitBtn.removeAttribute('aria-busy');
+        submitBtn.disabled = false;
+        if (statusEl) {
+          statusEl.className = 'form-status success';
+          statusEl.textContent = 'Request sent. Thank you! We will contact you shortly.';
+          setTimeout(() => { statusEl.hidden = true; }, 5000);
+        }
+      }, 1800);
     }
   });
 

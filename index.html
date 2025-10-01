@@ -31,6 +31,7 @@
           <ul id="primary-menu" class="nav-list">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
+            <li><a href="#leadership">Leadership</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#showcase">Showcase</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -111,7 +112,7 @@
       <div class="container about-grid">
         <div class="about-media" aria-label="About images">
           <img class="about-frame" src="elec.jpg" alt="Project photo 1" aria-hidden="true" />
-          <img class="about-frame" src="nyumbaujenzi.jpg" alt="Project photo 2" aria-hidden="true" />
+          <img class="about-frame" src="ujenz00.jpg" alt="Project photo 2" aria-hidden="true" />
           <img class="about-frame" src="installelec.jpg" alt="Project photo 3" aria-hidden="true" />
           <img class="about-frame" src="ArchitecturalWorksConsultancy.jpg" alt="Project photo 4" aria-hidden="true" />
           <img class="about-frame" src="pic_1 - Photo.jpg" alt="Project photo 5" aria-hidden="true" />
@@ -142,6 +143,53 @@
           <div class="about-ctas">
             <a class="btn btn-outline" href="#projects">View Projects</a>
             <a class="btn btn-primary" href="#contact">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership / CEO -->
+    <section class="section leadership" id="leadership">
+      <div class="container leadership-grid">
+        <div class="leader-photo" aria-label="CEO portrait">
+          <img src="IMG-20250207-WA0001.jpg" alt="CEO portrait" />
+        </div>
+        <div class="leader-content">
+          <header class="section-header left">
+            <h2>Leadership</h2>
+            <p>Vision, integrity, and execution leading SJR Ventures forward.</p>
+          </header>
+          <div class="leader-header">
+            <div class="leader-name-title">
+              <h3 class="leader-name">Your Name</h3>
+              <span class="leader-title">Founder & Chief Executive Officer</span>
+            </div>
+            <div class="leader-badge">SJR Ventures</div>
+          </div>
+          <p class="leader-bio">
+            With a track record of delivering efficient, safe and future‑ready projects, our CEO drives the company mission to build with quality and innovate with purpose—across construction, electrical systems, architecture, AC and CCTV.
+          </p>
+          <ul class="leader-facts">
+            <li>
+              <span class="fact-label">Experience</span>
+              <span class="fact-value">9+ years leading multi‑disciplinary teams</span>
+            </li>
+            <li>
+              <span class="fact-label">Focus</span>
+              <span class="fact-value">Safety, reliability, and on‑time delivery</span>
+            </li>
+            <li>
+              <span class="fact-label">Email</span>
+              <span class="fact-value"><a href="mailto:sjrelectrical93@gmail.com">sjrelectrical93@gmail.com</a></span>
+            </li>
+            <li>
+              <span class="fact-label">Phone</span>
+              <span class="fact-value"><a href="tel:+255713268555">+255 713 268 555</a></span>
+            </li>
+          </ul>
+          <div class="leader-ctas">
+            <a class="btn btn-outline" href="#projects">View Work</a>
+            <a class="btn btn-primary" href="#contact">Contact CEO Office</a>
           </div>
         </div>
       </div>
@@ -235,7 +283,7 @@
           <div class="slideshow-wrapper">
             <div class="slide-content active" data-slide="1">
               <div class="slide-image">
-                <img src="nyumbaujenzi.jpg" alt="Construction work in progress" />
+                <img src="ujenz00.jpg" alt="Construction work in progress" />
                 <div class="image-overlay">
                   <div class="overlay-content">
                     <span class="slide-number">01</span>
@@ -438,7 +486,7 @@
             <h2>Contact Us</h2>
             <p>Get a fast, professional quote for your next project.</p>
           </header>
-          <form class="contact-form" id="quote-form" action="https://formsubmit.co/sjrelectrical93@gmail.com" method="POST">
+          <form class="contact-form" id="quote-form" action="https://formsubmit.co/sjrelectrical93@gmail.com" method="POST" target="_blank">
             <input type="hidden" name="_subject" value="New Service Request from SJR Ventures" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
@@ -477,14 +525,43 @@
               <textarea id="message" name="message" rows="5" placeholder="Briefly describe your project" required></textarea>
             </div>
             <div class="form-actions">
-              <button type="submit" class="btn btn-primary">Request a Quote</button>
+              <button type="submit" class="btn btn-primary" id="submit-btn">
+                <span class="btn-spinner" aria-hidden="true"></span>
+                <span class="btn-label">Request a Quote</span>
+              </button>
               <p class="form-note">We typically respond within 1 business day.</p>
+            </div>
+            <div class="form-status" id="form-status" role="status" aria-live="polite" aria-atomic="true" hidden>
+              Sending your request...
             </div>
           </form>
           <div class="contact-details">
             <p><strong>Email:</strong> <a href="mailto:sjrelectrical93@gmail.com">sjrelectrical93@gmail.com</a></p>
             <p><strong>Phone:</strong> +225 713 268 555</p>
             <p><strong>Office:</strong>somora avenue, Elite city floow no.2, Office B</p>
+          </div>
+          <div class="contact-actions">
+            <a class="contact-card" href="mailto:sjrelectrical93@gmail.com" aria-label="Email us">
+              <div class="contact-icon">✉️</div>
+              <div class="contact-text">
+                <strong>Email</strong>
+                <span>sjrelectrical93@gmail.com</span>
+              </div>
+            </a>
+            <a class="contact-card" href="tel:+255713268555" aria-label="Call us">
+              <div class="contact-icon">📞</div>
+              <div class="contact-text">
+                <strong>Call</strong>
+                <span>+255 713 268 555</span>
+              </div>
+            </a>
+            <a class="contact-card" href="https://wa.me/255713268555" target="_blank" rel="noopener" aria-label="WhatsApp chat">
+              <div class="contact-icon">🟢</div>
+              <div class="contact-text">
+                <strong>WhatsApp</strong>
+                <span>Chat now</span>
+              </div>
+            </a>
           </div>
         </div>
         <div class="contact-map" aria-label="Office location map">
